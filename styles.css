@@ -250,6 +250,79 @@ section a:hover {
     border: none;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: var(--text-color);
+    border: 1px solid var(--cta-border-color);
+}
+
+.close {
+    color: var(--secondary-text-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--link-hover-color);
+}
+
+.modal h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.modal p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.modal iframe {
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid var(--cta-border-color);
+}
+
+.modal a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.modal a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 90%;
+        width: 90%;
+    }
+}
+
 @media (max-width: 600px) {
     header h1 {
         font-size: 2em;

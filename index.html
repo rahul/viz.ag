@@ -170,6 +170,45 @@
         </p>
     </footer>
 
+    <div id="adModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Flat for Sale</h2>
+            <p><strong>Description:</strong> 2BHK 1020 sqft flat at Raj Residency, in Midilapuri Vuda Layout, Vizag.
+                Flat is
+                well-maintained. Price 45L negotiable.</p>
+            <p><strong>Direction:</strong> Beside Trinity Church, Midilapuri Vuda Colony, near Carshed Jn</p>
+            <p><strong>Contact Info:</strong> <a href="https://api.whatsapp.com/send/?phone=9966009281"
+                    target="_blank">WhatsApp 9966009281</a></p>
+            <iframe
+                src="
+                https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3798.770073154446!2d83.35495287517455!3d17.802499983157226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDQ4JzA5LjAiTiA4M8KwMjEnMjcuMSJF!5e0!3m2!1sen!2sin!4v1727690088080!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+
+    <script>
+        window.onload = function () {
+            var modal = document.getElementById('adModal');
+            var closeBtn = document.getElementsByClassName('close')[0];
+
+            modal.style.display = 'flex';
+
+            closeBtn.onclick = function () {
+                modal.style.display = 'none';
+            }
+
+            // window.onclick = function (event) {
+            //     if (event.target == modal) {
+            //         modal.style.display = 'none';
+            //     }
+            // }
+        }
+    </script>
+
+
     <script>
         const handles = ["chaitanya.rao", "khazana.gems", "radio.mirchi", "subbu", "novotel", "sunrise.resorts"];
         const inputField = document.getElementById('inputField');
