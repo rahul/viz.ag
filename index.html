@@ -178,8 +178,8 @@
                 Flat is
                 well-maintained. Price 45L negotiable.</p>
             <p><strong>Direction:</strong> Beside Trinity Church, Midilapuri Vuda Colony, near Carshed Jn</p>
-            <p><strong>Contact Info:</strong> <a href="https://api.whatsapp.com/send/?phone=9966009281"
-                    target="_blank">WhatsApp 9966009281</a></p>
+            <p><strong>Contact Info:</strong> <a class="ad-contact-btn"
+                    href="https://api.whatsapp.com/send/?phone=9966009281" target="_blank">WhatsApp 9966009281</a></p>
             <iframe
                 src="
                 https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3798.770073154446!2d83.35495287517455!3d17.802499983157226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDQ4JzA5LjAiTiA4M8KwMjEnMjcuMSJF!5e0!3m2!1sen!2sin!4v1727690088080!5m2!1sen!2sin"
@@ -192,19 +192,27 @@
     <script>
         window.onload = function () {
             var modal = document.getElementById('adModal');
-            var closeBtn = document.getElementsByClassName('close')[0];
+            var closeBtn = modal.getElementsByClassName('close')[0];
+            var adContactBtn = modal.getElementsByClassName('ad-contact-btn')[0];
 
             modal.style.display = 'flex';
 
+            posthog.capture('ad_modal_viewed', {
+                'ad_id': '1'
+            })
+
             closeBtn.onclick = function () {
                 modal.style.display = 'none';
+                posthog.capture('ad_modal_closed', {
+                    'ad_id': '1'
+                })
             }
 
-            // window.onclick = function (event) {
-            //     if (event.target == modal) {
-            //         modal.style.display = 'none';
-            //     }
-            // }
+            adContactBtn.onclick = function () {
+                posthog.capture('ad_contact_clicked', {
+                    'ad_id': '1'
+                })
+            }
         }
     </script>
 
