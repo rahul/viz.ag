@@ -40,14 +40,40 @@ a:hover {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    min-height: 100vh;
+}
+
+.instagram-feed {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
+    margin-bottom: 40px;
+}
+
+.instagram-media {
+    margin: 0 !important;
+}
+
+.redirect-button {
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.redirect-button:hover {
+    background-color: #0081d6;
+}
+
+.message {
+    text-align: center;
 }
 
 header {
@@ -357,41 +383,4 @@ section a:hover {
     section h2 {
         font-size: 1.5em;
     }
-}
-
-/* Loading spinner and redirect page styles */
-body.redirect-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #f5f5f5;
-}
-
-.spinner {
-    width: 40px;
-    height: 40px;
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #3498db;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin-bottom: 20px;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.message {
-    text-align: center;
-    color: #333;
 }
